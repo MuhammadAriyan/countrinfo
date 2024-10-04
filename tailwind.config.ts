@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		backgroundImage:{
+			'my-bg':"url('../public/bg.jpg')"
+		}
+		,
   		colors: {
   			background: 'var(--background)',
   			foreground: 'var(--foreground)'
@@ -20,6 +24,7 @@ const config: Config = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),
+    require('tailwindcss-filters'),]
 };
 export default config;

@@ -65,10 +65,10 @@ const CountryInfo = () => {
   }
 
   return (
-    <div className="h-screen justify-center content-center p-1 font-mono font-bold">
-      <Card className="m-2 sm:m-1/6 md:m-1/4 lg:m-1/3 xl:m-1/2 p-3">
+    <div className="bg-my-bg h-screen justify-center content-center p-1 font-mono font-bold">
+      <Card className=" bg-transparent backdrop-blur-xl m-2 sm:m-1/6 md:m-1/4 lg:m-1/3 xl:m-1/2 p-3">
         <CardHeader>
-          <CardTitle className="text-center">COUNTRINFO</CardTitle>
+          <CardTitle className="text-center text-white ">COUNTRINFO</CardTitle>
         </CardHeader>
         <CardContent>
           <Textarea
@@ -79,7 +79,7 @@ const CountryInfo = () => {
             }}
           />
         </CardContent>
-        <CardDescription className="text-center">
+        <CardDescription className="text-center text-white">
           {!isLoading && !error && data && (
             <div className=' p-2 '>
               <h1>NAME: {data?.name}</h1>
