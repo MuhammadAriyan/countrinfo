@@ -65,10 +65,10 @@ const CountryInfo = () => {
   }
 
   return (
-    <div className="bg-my-bg h-screen justify-center content-center p-1 font-mono font-bold">
-      <Card className=" border-4 border-black bg-transparent text-black  m-2 sm:m-1/6 md:m-1/4 lg:m-1/3 xl:m-1/2 p-3">
+    <div className="bg-my-bg h-screen justify-center content-center p-1 font-mono font-bold truncate">
+      <Card className=" border-4 border-black bg-transparent text-black  m-2 sm:m-1/6 md:m-1/4 lg:m-1/3 xl:m-1/2 p-3 truncate">
         <CardHeader>
-          <CardTitle className="text-center text-white bg-black p-3 rounded-md">COUNTRINFO</CardTitle>
+          <CardTitle className="text-center text-white bg-black p-3 rounded-md truncate">COUNTRINFO</CardTitle>
         </CardHeader>
         <CardContent>
           <input
