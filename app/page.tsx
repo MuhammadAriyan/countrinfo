@@ -66,9 +66,9 @@ const CountryInfo = () => {
 
   return (
     <div className="bg-my-bg h-screen justify-center content-center p-1 font-mono font-bold">
-      <Card className=" bg-transparent backdrop-blur-xl m-2 sm:m-1/6 md:m-1/4 lg:m-1/3 xl:m-1/2 p-3">
+      <Card className=" border-4 border-black bg-transparent text-black  m-2 sm:m-1/6 md:m-1/4 lg:m-1/3 xl:m-1/2 p-3">
         <CardHeader>
-          <CardTitle className="text-center text-white ">COUNTRINFO</CardTitle>
+          <CardTitle className="text-center text-white bg-black p-3 rounded-md">COUNTRINFO</CardTitle>
         </CardHeader>
         <CardContent>
           <Textarea
@@ -81,7 +81,7 @@ const CountryInfo = () => {
         </CardContent>
         <CardDescription className="text-center text-white">
           {!isLoading && !error && data && (
-            <div className=' p-2 '>
+            <div className=' p-2 text-black'>
               <h1>NAME: {data?.name}</h1>
               <h1>OFFICIAL NAME: {data?.officialName}</h1>
               <h1>CAPITAL: {data?.capital}</h1>
@@ -90,7 +90,7 @@ const CountryInfo = () => {
               <img className='mx-auto rounded-lg m-2' src={data?.flag} alt={data?.officialName + " flag"} />
             </div>
           )}
-          {error && <p>No data found for the entered input.</p>}
+          {error && <p className=' text-black'>No data found for the entered input.</p>}
         </CardDescription>
       </Card>
     </div>
