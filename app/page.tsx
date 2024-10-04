@@ -44,7 +44,7 @@ const CountryInfo = () => {
         return;
       }
 
-      let dataObj: DataObj = {
+      const dataObj: DataObj = {
         name: jsData[0]?.name.common,
         officialName: jsData[0]?.name.official,
         capital: jsData[0]?.capital,
@@ -58,7 +58,7 @@ const CountryInfo = () => {
       setError(false);
       setIsLoading(false);
     } catch (e) {
-      console.log('Country not found');
+      console.log(e);
       setError(true);
       setData(null);
     }
