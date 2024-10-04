@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# CountryInfo
 
-First, run the development server:
+![CountryInfo Logo](https://your-image-url.com/logo.png) <!-- Optional: Replace with an actual logo if you have one -->
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Overview
+
+**CountryInfo** is a web application that allows users to fetch and display information about countries using the [REST Countries API](https://restcountries.com/). Users can enter the name of any country, and the application will provide details such as the official name, capital, population, continents, and the country’s flag.
+
+## Features
+
+- User-friendly interface to input country names.
+- Fetches country data from the REST Countries API.
+- Displays:
+  - Common Name
+  - Official Name
+  - Capital
+  - Population
+  - Continent(s)
+  - Flag image
+- Error handling for invalid country inputs.
+- Responsive design for various screen sizes.
+
+## Live Demo
+
+You can view the live application [here](https://countrinfo-rbvjpdo5o-muhammadariyans-projects.vercel.app/).
+
+## Tech Stack
+
+- **Frontend**: React, Tailwind CSS
+- **API**: REST Countries API
+- **Deployment**: Vercel
+
+## Installation
+
+To run the CountryInfo application locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/countryinfo.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd countryinfo
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and go to `http://localhost:3000`.
+
+## Usage
+
+1. Enter the name of a country in the input field.
+2. Press "Enter" or click outside the input to fetch the data.
+3. View the country information displayed below the input.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to CountryInfo, please fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [REST Countries API](https://restcountries.com/) for providing country data.
+- [React](https://reactjs.org/) for the framework.
+- [Tailwind CSS](https://tailwindcss.com/) for styling.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Instructions for Use:
+1. **Logo**: If you have a logo, replace the URL in `![CountryInfo Logo](https://your-image-url.com/logo.png)` with the actual URL. If you don’t have a logo, you can remove that line.
+2. **Repository URL**: Update the `git clone` URL to point to your actual repository on GitHub.
+3. **Customization**: Feel free to modify any sections to better suit your preferences or project specifics.
+4. **Save the File**: Save the content as `README.md` in the root of your project directory.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Let me know if you need any further changes or assistance!
