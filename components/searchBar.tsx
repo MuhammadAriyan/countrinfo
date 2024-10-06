@@ -19,7 +19,7 @@ const SearchBar = () => {
     }
 
     useEffect(()=>{
-        const interval = setInterval(genRan, 5000)
+        setInterval(genRan, 5000)
     },[])
 
     const handleInputChange = (event:React.ChangeEvent<HTMLInputElement>) => {
