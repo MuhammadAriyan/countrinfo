@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
   	extend: {
 		backgroundImage:{
-			'my-bg':"url('../public/bg.jpg')"
+			'my-bg':"url('../public/bg.gif')"
 		}
 		,
   		colors: {

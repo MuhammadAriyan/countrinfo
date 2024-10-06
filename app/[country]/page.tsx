@@ -2,13 +2,13 @@
 
 import { useEffect } from "react"
 import React, { useState } from 'react'
+import { TriangleAlert } from "lucide-react"
 
 import {
   Card,
   CardDescription,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
+import Loader from "@/components/loader";
 
 interface DataObj {
   name?: string;
@@ -60,6 +60,7 @@ const CountryInfo = ({params}:{params:{country:string}}) => {
       console.log(e);
       setError(true);
       setData(null);
+      setIsLoading(false)
     }
   }
   useEffect(()=>{
@@ -69,14 +70,11 @@ const CountryInfo = ({params}:{params:{country:string}}) => {
   },[params?.country])
 
   return (
-    <div className="bg-my-bg h-screen justify-center content-center p-1 font-mono font-bold truncate">
-      <Card className=" border-4 border-black bg-transparent text-black  m-2 sm:m-1/6 md:m-1/4 lg:m-1/3 xl:m-1/2 p-3 truncate">
-        <CardHeader>
-          <CardTitle className="text-center text-white bg-black p-3 rounded-md truncate">COUNTRINFO</CardTitle>
-        </CardHeader>
-        <div className="text-center text-white">
+    <div className="bg-my-bg bg-cover bg-no-repeat min-h-screen flex items-center justify-center p-4 font-mono">
+      <Card className="w-full max-w-3xl border-4 border-blue-500 bg-white bg-opacity-90 p-6 md:p-10 rounded-lg shadow-xl">
+        <div className="text-center text-white xl:text-lg lg:text-base md:text-sm sm:text-xs break-words whitespace-normal">
           {!isLoading && !error && data && (
-            <div className=' p-2 text-black'>
+            <div className=' pb-3 pt-3 text-black'>
               <h1>NAME: {data?.name}</h1>
               <h1>OFFICIAL NAME: {data?.officialName}</h1>
               <h1>CAPITAL: {data?.capital}</h1>
@@ -85,7 +83,16 @@ const CountryInfo = ({params}:{params:{country:string}}) => {
               <img className='mx-auto rounded-lg m-2' src={data?.flag} alt={data?.officialName + " flag"} />
             </div>
           )}
-          {error && <CardDescription className=' text-black'>No data found for the entered input.</CardDescription>}
+          {error && <div className='text-red-600 flex items-center justify-center'>
+            <TriangleAlert className="mr-2" /> 
+            <span>No data found for the entered input.</span>
+          </div>
+          }
+          {isLoading &&
+            <div className=" flex justify-center items-center">
+            <Loader/>
+            </div>
+          }
         </div>
       </Card>
     </div>
