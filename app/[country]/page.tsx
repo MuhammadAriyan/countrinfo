@@ -1,13 +1,15 @@
 'use client'
 
+import { useEffect } from "react"
 import React, { useState } from 'react'
+
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+
 interface DataObj {
   name?: string;
   officialName?: string;
@@ -17,7 +19,7 @@ interface DataObj {
   flag?: string;
 }
 
-const CountryInfo = () => {
+const CountryInfo = ({params}:{params:{country:string}}) => {
   const [data, setData] = useState<null | DataObj>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
@@ -30,7 +32,7 @@ const CountryInfo = () => {
       const res = await fetch(`https://restcountries.com/v3.1/name/${param1}`);
 
       if (!res.ok) {
-        throw new Error("Invalid country");
+        throw new Error("Invalid country...");
       }
 
       const jsData = await res.json();
@@ -60,6 +62,11 @@ const CountryInfo = () => {
       setData(null);
     }
   }
+  useEffect(()=>{
+    console.log(params , params?.country);
+    
+        fetchData(params?.country)
+  },[params?.country])
 
   return (
     <div className="bg-my-bg h-screen justify-center content-center p-1 font-mono font-bold truncate">
@@ -67,17 +74,7 @@ const CountryInfo = () => {
         <CardHeader>
           <CardTitle className="text-center text-white bg-black p-3 rounded-md truncate">COUNTRINFO</CardTitle>
         </CardHeader>
-        <CardContent>
-          <input
-          type='text'
-            placeholder="ENTER ANY COUNTRY"
-            className="text-center flex min-h-[60px] w-full rounded-md border border-neutral-200 bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-neutral-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 disabled:cursor-not-allowed disabled:opacity-50 dark:border-neutral-800 dark:placeholder:text-black dark:focus-visible:ring-neutral-300"
-            onChange={(event) => {
-              fetchData(event.target.value);
-            }}
-          />
-        </CardContent>
-        <CardDescription className="text-center text-white">
+        <div className="text-center text-white">
           {!isLoading && !error && data && (
             <div className=' p-2 text-black'>
               <h1>NAME: {data?.name}</h1>
@@ -88,8 +85,8 @@ const CountryInfo = () => {
               <img className='mx-auto rounded-lg m-2' src={data?.flag} alt={data?.officialName + " flag"} />
             </div>
           )}
-          {error && <p className=' text-black'>No data found for the entered input.</p>}
-        </CardDescription>
+          {error && <CardDescription className=' text-black'>No data found for the entered input.</CardDescription>}
+        </div>
       </Card>
     </div>
   );
