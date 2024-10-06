@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import SearchBar from "@/components/searchBar";
-import { HeartIcon, InstagramLogoIcon } from "@radix-ui/react-icons";
-import {Flame, Github , Instagram, Link2, Link2Icon, Linkedin} from "lucide-react";
+import { HeartIcon } from "@radix-ui/react-icons";
+import {Flame, Github , Instagram, Linkedin} from "lucide-react";
 import Link from "next/link";
 
 const geistSans = localFont({

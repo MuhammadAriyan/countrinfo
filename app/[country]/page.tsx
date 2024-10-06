@@ -6,7 +6,6 @@ import { TriangleAlert } from "lucide-react"
 
 import {
   Card,
-  CardDescription,
 } from "@/components/ui/card"
 import Loader from "@/components/loader";
 
