@@ -1,7 +1,7 @@
 
 # CountryInfo
 
-![CountryInfo Logo](https://your-image-url.com/logo.png) <!-- Optional: Replace with an actual logo if you have one -->
+![CountryInfo Logo](./app/favicon.ico) <!-- Optional: Replace with an actual logo if you have one -->
 
 ## Overview
 
@@ -23,7 +23,7 @@
 
 ## Live Demo
 
-You can view the live application [here](https://countrinfo-rbvjpdo5o-muhammadariyans-projects.vercel.app/).
+You can view the live application [here](https://countryinfo-murex.vercel.app/).
 
 ## Tech Stack
 
