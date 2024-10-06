@@ -8,7 +8,7 @@ const CountryInfo = () => {
         Access information about any country around the globe 
         </h1>
         <p className="text-gray-700 text-lg md:text-xl font-light leading-relaxed">
-          Your go-to tool for quickly accessing essential information about any country in the world. Whether you're looking for geographic location,or population statistics, this platform delivers everything in one place.
+          Your go-to tool for quickly accessing essential information about any country in the world. Whether you are looking for geographic location,or population statistics, this platform delivers everything in one place.
         </p>
         <p className="text-gray-700 text-lg md:text-xl font-light mt-4">
           Perfect for students, travelers, or anyone curious about global diversity, This website helps you stay informed effortlessly.
